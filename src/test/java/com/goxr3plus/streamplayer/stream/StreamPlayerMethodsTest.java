@@ -17,7 +17,7 @@ import static org.mockito.Mockito.mock;
  * not as a part of test driven development.
  */
 public class StreamPlayerMethodsTest {
-    StreamPlayer player;
+    StreamPlayerInterface player;
     private File audioFile;
 
     @BeforeEach

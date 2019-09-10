@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.util.logging.Logger;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class StreamPlayerTest {
@@ -21,8 +20,8 @@ class StreamPlayerTest {
         final File audioFile = new File("Logic - Ballin [Bass Boosted].mp3");
 
         // Setup the spy
-        final StreamPlayer streamPlayer = new StreamPlayer(logger);
-        final StreamPlayer spy = spy(streamPlayer);
+        final StreamPlayerInterface streamPlayer = new StreamPlayer(logger);
+        final StreamPlayerInterface spy = spy(streamPlayer);
 
         // Execute & verify
 
