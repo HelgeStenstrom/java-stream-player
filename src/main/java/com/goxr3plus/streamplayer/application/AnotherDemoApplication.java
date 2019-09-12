@@ -15,34 +15,28 @@ import java.util.Map;
  */
 public class AnotherDemoApplication  {
 
-	private final String audioFileName = "Logic - Ballin [Bass Boosted].mp3";
+	private String audioFileName;
 
 	private StreamPlayerInterface streamPlayer;
 	private StreamPlayerListener listener;
 
-	public AnotherDemoApplication(StreamPlayerInterface streamPlayer) {
+	public AnotherDemoApplication(StreamPlayerInterface streamPlayer, String audioFileName) {
+		this.audioFileName = audioFileName;
 		this.streamPlayer = streamPlayer;
 		this.listener = new AnotherStreamPlayerListener(audioFileName, streamPlayer);
 
 	}
 
 
-	void start() {
+	public void start() {
 		try {
 
 			// Register to the Listeners
 		 	streamPlayer.addStreamPlayerListener(listener);
 
-			// Open a File
-			// open(new File("...")) //..Here must be the file absolute path
-			// open(INPUTSTREAM)
-			// open(AUDIOURL)
-
 			// Example
-			streamPlayer.open(new File(audioFileName));
-
-			//Seek by bytes
-			//seekBytes(500000L);
+			File audioFile = new File(audioFileName);
+			streamPlayer.open(audioFile);
 
 			//Seek +x seconds starting from the current position
 			streamPlayer.seekSeconds(15); // forward 15 seconds

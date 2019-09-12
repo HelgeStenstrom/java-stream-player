@@ -115,7 +115,7 @@ public final class TimeTool {
 	 * @return the int
 	 */
 	private static long durationInMilliseconds_Part2(final File file) {
-		long milliseconds = -1;
+		long milliseconds =  1000000;
 
 		// exists?
 		if (file.exists() && file.length() != 0) {

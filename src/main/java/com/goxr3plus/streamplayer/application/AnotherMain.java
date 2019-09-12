@@ -8,7 +8,11 @@ public class AnotherMain {
     public static void main(String[] args) {
 
         final StreamPlayerInterface streamPlayer = new StreamPlayer();
-        final AnotherDemoApplication application = new AnotherDemoApplication(streamPlayer);
+        String audioFileName;
+        audioFileName = "Logic - Ballin [Bass Boosted].mp3";
+        audioFileName = "Ballin.mp3";
+        audioFileName = "Sometimes.flac";
+        final AnotherDemoApplication application = new AnotherDemoApplication(streamPlayer, audioFileName);
         application.start();
 
     }
